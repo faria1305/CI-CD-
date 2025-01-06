@@ -31,9 +31,9 @@ jobs:
       - name: Run tests
         run: npm test
 
-      # Deploy if tests pass
-      - name: Deploy to Vercel
-        if: success()
-        run: |
-          npm install -g vercel
-          vercel --prod --token ${{ secrets.VERCEL_TOKEN }}
+     # Deploy if tests pass
+- name: Deploy to Vercel
+if: success()
+run: |
+  npm install -g vercel
+  vercel deploy --prod --yes --token ${{ secrets.VERCEL_TOKEN }}
