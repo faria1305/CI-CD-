@@ -18,7 +18,7 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
-  res.send('Hello World2!');
+  res.send('Helo World2!');
 });
 
 module.exports = app; // Export the app for Vercel
